@@ -1,4 +1,4 @@
-# SaexyLLM
+# SaexyLLM (I know it's a mess! will clean up later)
 
 - fine tuning: trained on the crawled sachsen text with german-gpt2. For now only trained partial text and the generated text is a poem in hochdeutsch.
 
