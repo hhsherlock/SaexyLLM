@@ -1,5 +1,12 @@
-# SaexyLLM (I know it's a mess! will clean up later)
+# SaexyLLM
 
-- fine tuning: trained on the crawled sachsen text with german-gpt2. For now only trained partial text and the generated text is a poem in hochdeutsch.
+This repository contains code for various methods I experimented with to create a dialect-generating large language model (each folder represents a different approach). The primary goal is to train the model using a small dataset due to limited resources.
 
-- sachsen_dictionary: use the same german-gpt2 model to find the perplexity of the text in sachsen dataset. Find the closest word in the hochdeutsch to sachsen dialect dictionary. Get a dictionary which can be used for this sachsen poem dataset. Last step replace all the confused words with the newly generated dictionary. (Problems: the hochdeustch to sachsen dialect dictionary is very limited; in the sachsen dataset, there are several words that are combined together which confuses the model)
+Methods:
+- **Data Crawling** – Collecting data from the internet and transcribed audio files, then cleaning up the sentences.
+- **Dictionary Approach** – Calculating sentence perplexity and replacing words using an existing dictionary.
+- **LoRA Fine-Tuning** – Fine-tuning the model with LoRA; different parameters were tested.
+- **Skip-Gram** – Using the skip-gram method to find equivalent words in standard and dialect German.
+- **Transition Matrix** – Modifying the embedding matrix to facilitate dialect generation.
+
+**Evaluation** – Assessing the generated output using BLEU scores and perplexity measurements.
